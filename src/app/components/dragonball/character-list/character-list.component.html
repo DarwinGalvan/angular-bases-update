@@ -1,0 +1,16 @@
+<h3>{{listName()}}</h3>
+<ol>
+  @for (character of Characters(); track character.id) { @if(character.power >
+  700){
+
+  <li>
+    <span>{{ character.name }}</span>
+    <strong
+      [class.text-danger]="character.power > 9000"
+      [class.text-primary]="character.power < 9000"
+    >
+      ({{ character.power }})
+    </strong>
+  </li>
+  } }
+</ol>
